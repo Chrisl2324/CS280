@@ -1,0 +1,13 @@
+3456 george  10.25
+%bold  
+               
+% font 14
+%regular
+# perform italic only
+% %italic
+67899 smith 9643.45
+
+# return to regular text only
+%regular
+278 hello  - +654
+
