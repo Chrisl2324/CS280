@@ -15,23 +15,26 @@ RA3
 
 using namespace std;
 
-int main() {
+int main(int argc, char *argv[]) {
     string filename;
 
-    cout << "Please enter a filename: " << endl;
-    getline(cin, filename);
-
-    if (filename.empty()) {
+    if (argc < 2) {
         cout << "NO SPECIFIED INPUT FILE NAME." << endl;
-        exit(1);
+        return 1;
+    } else {
+        filename = argv[1];  // Get filename from command line argument
     }
 
     ifstream file(filename);
 
     if (!file.is_open()) {
         cout << "Cannot open the file: " << filename << "." << endl;
-        exit(1);
+        return 1;
     }
+
+    // Process file as normal
+
+    
 
     string line;
 
